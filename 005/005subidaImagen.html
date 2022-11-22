@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container p-5">
+      <form action="005subidaImagen.php" method="post" enctype="multipart/form-data">
+        <div class="mb-3 row">
+          <label for="inputImage" class="col-4 col-form-label">Choose file</label>
+          <div class="col-8">
+            <input
+              type="file"
+              class="form-control"
+              name="inputImage"
+              id="inputImage"
+              aria-describedby="fileHelpId"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="ancho" class="col-4 col-form-label">Anchura</label>
+          <div class="col-1">
+            <input
+              type="number"
+              class="form-control"
+              name="ancho"
+              id="ancho"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="alto" class="col-4 col-form-label">Altura</label>
+          <div class="col-1">
+            <input
+              type="number"
+              class="form-control"
+              name="alto"
+              id="alto"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
