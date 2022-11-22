@@ -11,11 +11,11 @@
 </head>
 
 <?php
-
-if (!isset($_COOKIE['fondo'])) {
+session_start();
+if (!isset($_SESSION['fondo'])) {
     echo "<body>";
 } else {
-    $fondoBG = $_COOKIE['fondo'];
+    $fondoBG = $_SESSION['fondo'];
     echo "<body class='".$fondoBG."'>";
 }
 ?>
@@ -26,11 +26,13 @@ if (!isset($_COOKIE['fondo'])) {
                 Dropdown button
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item bg-primary" href="007bgPrimary.php">Color primario</a></li>
-                <li><a class="dropdown-item bg-secondary" href="007bgSecondary.php">Color secundario</a></li>
-                <li><a class="dropdown-item bg-success" href="007bgSuccess.php">Color éxito</a></li>
+                <li><a class="dropdown-item bg-primary" href="008bgPrimary.php">Color primario</a></li>
+                <li><a class="dropdown-item bg-secondary" href="008bgSecondary.php">Color secundario</a></li>
+                <li><a class="dropdown-item bg-success" href="008bgSuccess.php">Color éxito</a></li>
             </ul>
         </div>
+
+        <a name="enlacePag2" id="enlacePag2" class="btn btn-primary bg-dark" href="408fondoSesion2.php" role="button">Enlace fondo2</a>
     </div>
 </body>
 
