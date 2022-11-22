@@ -13,8 +13,10 @@ if (isset($_POST['enviar'])) {
             // almacenamos el usuario en la sesión
             session_start();
             $_SESSION['usuario'] = $usuario;
+            $_SESSION['peliculas'] = ["Gladiator","El Señor de los Anillos", "Blade Runner"];
+            $_SESSION['series'] = ["Juego de Tronos","Suits (La clave del éxito)", "The Office"];
             // cargamos la página principal
-            include "012peliculas.php";
+            header("Location: 012peliculas.php");
         } else {
             // Si las credenciales no son válidas, se vuelven a pedir
             $error = "Usuario o contraseña no válidos!";
